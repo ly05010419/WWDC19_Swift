@@ -20,6 +20,7 @@
 		B15D8F16233137A900474606 /* LandmarkDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15D8F15233137A900474606 /* LandmarkDetailController.swift */; };
 		B15D8F1B2331456500474606 /* AvatarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15D8F1A2331456500474606 /* AvatarController.swift */; };
 		B15D8F1D2331481700474606 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15D8F1C2331481700474606 /* MapViewController.swift */; };
+		B1BE67742333DBF600E8C01E /* LandmarkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BE67732333DBF600E8C01E /* LandmarkDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		B15D8F15233137A900474606 /* LandmarkDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetailController.swift; sourceTree = "<group>"; };
 		B15D8F1A2331456500474606 /* AvatarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarController.swift; sourceTree = "<group>"; };
 		B15D8F1C2331481700474606 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		B1BE67732333DBF600E8C01E /* LandmarkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetail.swift; sourceTree = "<group>"; };
 		EF27BA1F3B22421D6C613A6D /* Pods-WWDC19-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WWDC19-Swift.release.xcconfig"; path = "Target Support Files/Pods-WWDC19-Swift/Pods-WWDC19-Swift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +113,7 @@
 				B15D8F0F23311E7E00474606 /* Avatar.swift */,
 				B15D8F13233134B200474606 /* MapView.swift */,
 				B1119D2423327D5800ABC8CD /* CategoryItemLarge.swift */,
+				B1BE67732333DBF600E8C01E /* LandmarkDetail.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				B15D8F1023311E7E00474606 /* Avatar.swift in Sources */,
 				B1119D2523327D5800ABC8CD /* CategoryItemLarge.swift in Sources */,
 				B15D8F14233134B200474606 /* MapView.swift in Sources */,
+				B1BE67742333DBF600E8C01E /* LandmarkDetail.swift in Sources */,
 				B1019D622327FDF9003193C9 /* ViewController.swift in Sources */,
 				B15D8F16233137A900474606 /* LandmarkDetailController.swift in Sources */,
 				B1019D602327FDF9003193C9 /* AppDelegate.swift in Sources */,
