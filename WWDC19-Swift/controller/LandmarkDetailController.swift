@@ -15,22 +15,30 @@ class LandmarkDetailController: UIViewController,UIScrollViewDelegate {
     var dataList: [Landmark] = Array()
     
     override func viewDidLoad() {
-        
-        let mapView = MapView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 400), latitude:model.coordinates?.latitude ?? 0,longitude:model.coordinates?.longitude ?? 0)
+        let width = UIScreen.main.bounds.size.width
+        let mapView = MapView(frame: CGRect(x: 0, y: 0, width: width, height: 400),
+                              latitude:model.coordinates.latitude,
+                              longitude:model.coordinates.longitude)
         self.view.addSubview(mapView)
         
-        let avatar = Avatar(frame: CGRect(x:0 , y: 300, width: 200, height: 200),imageName: model.imageName ?? "")
+        let avatar = Avatar(frame: CGRect(x:0 , y: 300, width: 200, height: 200),imageName: model.imageName)
         avatar.center.x = self.view.center.x
         self.view.addSubview(avatar)
         
-        let nameLabel = UILabel(frame: CGRect(x:0 , y: 500, width: UIScreen.main.bounds.size.width, height: 30))
+        let nameLabel = UILabel(frame: CGRect(x:0 , y: 500, width: width, height: 30))
         nameLabel.textAlignment = .center
         nameLabel.text = model.name
         nameLabel.font = UIFont.systemFont(ofSize: 15.0)
         self.view.addSubview(nameLabel)
         
-        let landmarkDetail:LandmarkDetail = LandmarkDetail(frame: CGRect(x:0 , y: 550, width: UIScreen.main.bounds.size.width, height: 320), dataList: dataList)
-        
+        let landmarkDetail:LandmarkDetail = LandmarkDetail(frame:
+            CGRect(x:0 , y: 550, width:width , height: 320),dataList: dataList)
         self.view.addSubview(landmarkDetail)
     }
 }
+
+
+
+
+
+

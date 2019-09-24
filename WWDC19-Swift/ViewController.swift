@@ -61,20 +61,20 @@ class ViewController: UITableViewController {
 }
 
 struct Landmark: Codable {
-    var id: Int?
-    var name: String?
-    var category: String?
-    var city: String?
-    var state: String?
-    var isFeatured: Bool?
-    var isFavorite: Bool?
-    var park: String?
-    var imageName: String?
-    var coordinates: Coordinate?
+    var id: Int!
+    var name: String!
+    var category: String!
+    var city: String!
+    var state: String!
+    var isFeatured: Bool!
+    var isFavorite: Bool!
+    var park: String!
+    var imageName: String!
+    var coordinates: Coordinate!
 }
 
 struct Coordinate: Codable {
-    var longitude: Double?
-    var latitude: Double?
+    var longitude: Double!
+    var latitude: Double!
 }
 
