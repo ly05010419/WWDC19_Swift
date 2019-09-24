@@ -1,55 +1,80 @@
-
-
-
-
-
-
 import UIKit
 import GoogleMaps
 
 class ViewController: UITableViewController {
     
-  
-    
-    
-    //    override func viewDidLoad() {
-    //        super.viewDidLoad()
-    ////        let label = UILabel()
-    ////        label.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-    ////        label.center = self.view.center
-    ////        label.text = "Hallo World"
-    ////        self.view.addSubview(label)
-    //
-    //        let avatar = Avatar(frame: CGRect(x: 0, y: 0, width: 200, height: 200),imageName: "chilkoottrail")
-    //        avatar.center = self.view.center
-    //        self.view.addSubview(avatar)
-    //    }
+    let list:[String] = ["Avatar","MapView","LandmarkDetail"]
+    var dataList: [Landmark] = Array()
+    var model:Landmark = Landmark()
     
     override func viewDidLoad() {
-//        let camera = GMSCameraPosition.camera(withLatitude: 34.052235, longitude: -118.243683, zoom: 7.5)
-//        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-//        mapView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 300)
-//        self.view.addSubview(mapView)
-//
-//        let avatar = Avatar(frame: CGRect(x:0 , y: 200, width: 200, height: 200),imageName: "chilkoottrail")
-//        avatar.center.x = self.view.center.x
-//        self.view.addSubview(avatar)
-        
+        do {
+            let path = Bundle.main.path(forResource: "landmarkData", ofType: "json")
+            
+            let data = try Data(contentsOf: URL(fileURLWithPath: path!))
+            
+            let jsonDecoder = JSONDecoder()
+            self.dataList = try jsonDecoder.decode([Landmark].self, from: data)
+            self.model = dataList[0]
+        } catch let error  {
+            print("Error:\(error)")
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return list.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath)
+        let label = cell.viewWithTag(1001) as! UILabel
+        label.text = list[indexPath.row]
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        switch indexPath.row {
+        case 0:
+            self.performSegue(withIdentifier: "avatarShow", sender: self)
+        case 1:
+            self.performSegue(withIdentifier: "mapViewShow", sender: self)
+        case 2:
+            self.performSegue(withIdentifier: "landmarkDetail", sender: self)
+        default:
+            self.performSegue(withIdentifier: "landmarkDetail", sender: self)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            switch identifier {
+            case "landmarkDetail":
+                if let vc = segue.destination as? LandmarkDetailController {
+                    vc.dataList = self.dataList
+                    vc.model = self.model
+                }
+            default: break
+            }
+        }
     }
     
 }
 
+struct Landmark: Codable {
+    var id: Int?
+    var name: String?
+    var category: String?
+    var city: String?
+    var state: String?
+    var isFeatured: Bool?
+    var isFavorite: Bool?
+    var park: String?
+    var imageName: String?
+    var coordinates: Coordinate?
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+struct Coordinate: Codable {
+    var longitude: Double?
+    var latitude: Double?
+}
 

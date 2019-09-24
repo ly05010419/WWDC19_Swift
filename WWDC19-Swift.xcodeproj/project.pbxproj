@@ -94,11 +94,11 @@
 		B1019D5E2327FDF9003193C9 /* WWDC19-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				B1019D5F2327FDF9003193C9 /* AppDelegate.swift */,
+				B1019D612327FDF9003193C9 /* ViewController.swift */,
 				B15D8F192331455100474606 /* controller */,
 				B15D8F18233142FB00474606 /* data */,
 				B15D8F17233142F100474606 /* views */,
-				B1019D5F2327FDF9003193C9 /* AppDelegate.swift */,
-				B1019D612327FDF9003193C9 /* ViewController.swift */,
 				B1019D632327FDF9003193C9 /* Main.storyboard */,
 				B1019D662327FE00003193C9 /* Assets.xcassets */,
 				B1019D682327FE00003193C9 /* LaunchScreen.storyboard */,
