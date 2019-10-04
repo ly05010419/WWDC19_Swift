@@ -16,9 +16,7 @@ class LandmarkDetailController: UIViewController,UIScrollViewDelegate {
     
     override func viewDidLoad() {
         let width = UIScreen.main.bounds.size.width
-        let mapView = MapView(frame: CGRect(x: 0, y: 0, width: width, height: 400),
-                              latitude:model.coordinates.latitude,
-                              longitude:model.coordinates.longitude)
+        let mapView = MapView(frame: CGRect(x: 0, y: 0, width: width, height: 400),model:model)
         self.view.addSubview(mapView)
         
         let avatar = Avatar(frame: CGRect(x:0 , y: 300, width: 200, height: 200),imageName: model.imageName)

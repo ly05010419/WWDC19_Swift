@@ -3,16 +3,14 @@ import GoogleMaps
 
 class ViewController: UITableViewController {
     
-    let list:[String] = ["Avatar","MapView","LandmarkDetail"]
+    let list:[String] = ["LandmarkDetail","Avatar","MapView"]
     var dataList: [Landmark] = Array()
     var model:Landmark = Landmark()
     
     override func viewDidLoad() {
         do {
             let path = Bundle.main.path(forResource: "landmarkData", ofType: "json")
-            
             let data = try Data(contentsOf: URL(fileURLWithPath: path!))
-            
             let jsonDecoder = JSONDecoder()
             self.dataList = try jsonDecoder.decode([Landmark].self, from: data)
             self.model = dataList[0]
@@ -35,11 +33,11 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         switch indexPath.row {
         case 0:
-            self.performSegue(withIdentifier: "avatarShow", sender: self)
-        case 1:
-            self.performSegue(withIdentifier: "mapViewShow", sender: self)
-        case 2:
             self.performSegue(withIdentifier: "landmarkDetail", sender: self)
+        case 1:
+            self.performSegue(withIdentifier: "avatarShow", sender: self)
+        case 2:
+            self.performSegue(withIdentifier: "mapViewShow", sender: self)
         default:
             self.performSegue(withIdentifier: "landmarkDetail", sender: self)
         }
@@ -51,6 +49,10 @@ class ViewController: UITableViewController {
             case "landmarkDetail":
                 if let vc = segue.destination as? LandmarkDetailController {
                     vc.dataList = self.dataList
+                    vc.model = self.model
+                }
+            case "mapViewShow":
+                if let vc = segue.destination as? MapViewController {
                     vc.model = self.model
                 }
             default: break

@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 class MapViewController:UIViewController{
-    
+    var model:Landmark = Landmark()
     override func viewDidLoad() {
-        let mapView = MapView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height), latitude:34.052235,longitude:-118.243683)
+        let mapView = MapView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height), model: model)
         self.view.addSubview(mapView)
     }
 }
