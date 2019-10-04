@@ -17,6 +17,8 @@ class ViewController: UITableViewController {
         } catch let error  {
             print("Error:\(error)")
         }
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.title = "WWDC19"
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
