@@ -10,42 +10,41 @@ import Foundation
 import UIKit
 
 class LandmarkDetail : UIView,UIScrollViewDelegate{
-    
-    private var items:[CategoryItemLarge] = Array()
+    var controller:UIViewController?
+    private var items:[CategoryItem] = Array()
     private var dataList:[Landmark] = Array()
-    private let paddingHorizontal:Int = 20
-    private let paddingVerticel:Int = 40
-    private let itemPadding:Int = 10
-    private let itemWidth:Int = 160
-    private let itemHeight:Int = 230
     
-    init(frame: CGRect, dataList:[Landmark]) {
+    private let paddingVerticel:Int = 40
+    
+    
+    
+    init(frame: CGRect, dataList:[Landmark],controller:UIViewController?) {
         self.dataList = dataList
+        self.controller = controller
         super.init(frame: frame)
         setup()
     }
     
     private func setup(){
-       let label = UILabel(frame: CGRect(x:20 , y: 10, width: 100, height: 30))
+        let label = UILabel(frame: CGRect(x:15 , y: 10, width: 100, height: 20))
         label.text = "All"
         label.font = UIFont.boldSystemFont(ofSize: 25.0)
         self.addSubview(label)
         
-        for data in dataList {
-            items.append(CategoryItemLarge(frame: CGRect.zero,imageName:data.imageName ?? ""))
-        }
+        let height:CGFloat = self.frame.size.height-30;
         
-        let height = itemHeight+(paddingVerticel * 2)
-        
-        let scrollView = UIScrollView(frame: CGRect(x: 0, y: 30, width: self.frame.width, height:CGFloat(height)))
+        let scrollView = UIScrollView(frame: CGRect(x: 0, y: 30, width: self.frame.width, height:height))
         scrollView.showsHorizontalScrollIndicator = false
-        for index in 0..<items.count {
-            let categoryItemLarge = items[index]
-            categoryItemLarge.frame = CGRect(x: (index * (itemWidth+itemPadding))+paddingHorizontal , y: paddingVerticel, width: itemWidth, height: itemHeight);
-            scrollView.addSubview(categoryItemLarge)
+        
+        var index = 0
+        for data in dataList {
+            let categoryItem = CategoryItem(frame: CGRect(x: (index * (160+10))+15 , y: paddingVerticel, width: 160, height: 250),model: data,width: 160,height: 200,controller:self.controller )
+            scrollView.addSubview(categoryItem)
+            items.append(categoryItem)
+            index = index+1
         }
         
-        let width =  ((itemWidth+itemPadding) * items.count)+(paddingHorizontal*2)+200
+        let width:CGFloat =  CGFloat(((160+10) * dataList.count)+15+230)
         scrollView.contentSize = CGSize(width:width , height: height)
         caculatePosition(scrollView: scrollView)
         scrollView.delegate = self
@@ -62,7 +61,7 @@ class LandmarkDetail : UIView,UIScrollViewDelegate{
     func caculatePosition(scrollView:UIScrollView ){
         for index in 0..<items.count {
             let categoryItemLarge = items[index]
-            let contentOffset = scrollView.contentOffset.x + CGFloat(paddingHorizontal)
+            let contentOffset = scrollView.contentOffset.x + CGFloat(15)
             
             var offset = contentOffset-categoryItemLarge.frame.origin.x
             offset = offset/450

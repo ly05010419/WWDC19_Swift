@@ -13,34 +13,38 @@
 		B1019D652327FDF9003193C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1019D632327FDF9003193C9 /* Main.storyboard */; };
 		B1019D672327FE00003193C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1019D662327FE00003193C9 /* Assets.xcassets */; };
 		B1019D6A2327FE00003193C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1019D682327FE00003193C9 /* LaunchScreen.storyboard */; };
-		B1119D2523327D5800ABC8CD /* CategoryItemLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1119D2423327D5800ABC8CD /* CategoryItemLarge.swift */; };
 		B15D8F1023311E7E00474606 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15D8F0F23311E7E00474606 /* Avatar.swift */; };
 		B15D8F1223311F3E00474606 /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = B15D8F1123311F3E00474606 /* landmarkData.json */; };
 		B15D8F14233134B200474606 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15D8F13233134B200474606 /* MapView.swift */; };
 		B15D8F16233137A900474606 /* LandmarkDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15D8F15233137A900474606 /* LandmarkDetailController.swift */; };
 		B15D8F1B2331456500474606 /* AvatarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15D8F1A2331456500474606 /* AvatarController.swift */; };
 		B15D8F1D2331481700474606 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15D8F1C2331481700474606 /* MapViewController.swift */; };
+		B181B4392348E59900D5982C /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B181B4382348E59900D5982C /* CategoryItem.swift */; };
+		B181B43B234910C400D5982C /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B181B43A234910C400D5982C /* CategoryRow.swift */; };
 		B1BE67742333DBF600E8C01E /* LandmarkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BE67732333DBF600E8C01E /* LandmarkDetail.swift */; };
+		B1CCB1D62348E1D000596B43 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CCB1D52348E1D000596B43 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5EE93BA1F2D0C498A6EB8F83 /* libPods-WWDC19-Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WWDC19-Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A63FDAC7E9CBDBFB49D90369 /* Pods-WWDC19-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WWDC19-Swift.debug.xcconfig"; path = "Target Support Files/Pods-WWDC19-Swift/Pods-WWDC19-Swift.debug.xcconfig"; sourceTree = "<group>"; };
-		B1019D5C2327FDF9003193C9 /* WWDC19-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WWDC19-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1019D5C2327FDF9003193C9 /* App-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1019D5F2327FDF9003193C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1019D612327FDF9003193C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B1019D642327FDF9003193C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B1019D662327FE00003193C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1019D692327FE00003193C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1019D6B2327FE00003193C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B1119D2423327D5800ABC8CD /* CategoryItemLarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemLarge.swift; sourceTree = "<group>"; };
 		B15D8F0F23311E7E00474606 /* Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
 		B15D8F1123311F3E00474606 /* landmarkData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = landmarkData.json; sourceTree = "<group>"; };
 		B15D8F13233134B200474606 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		B15D8F15233137A900474606 /* LandmarkDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetailController.swift; sourceTree = "<group>"; };
 		B15D8F1A2331456500474606 /* AvatarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarController.swift; sourceTree = "<group>"; };
 		B15D8F1C2331481700474606 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		B181B4382348E59900D5982C /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
+		B181B43A234910C400D5982C /* CategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 		B1BE67732333DBF600E8C01E /* LandmarkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetail.swift; sourceTree = "<group>"; };
+		B1CCB1D52348E1D000596B43 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EF27BA1F3B22421D6C613A6D /* Pods-WWDC19-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WWDC19-Swift.release.xcconfig"; path = "Target Support Files/Pods-WWDC19-Swift/Pods-WWDC19-Swift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,7 +90,7 @@
 		B1019D5D2327FDF9003193C9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B1019D5C2327FDF9003193C9 /* WWDC19-Swift.app */,
+				B1019D5C2327FDF9003193C9 /* App-Swift.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,7 +116,8 @@
 			children = (
 				B15D8F0F23311E7E00474606 /* Avatar.swift */,
 				B15D8F13233134B200474606 /* MapView.swift */,
-				B1119D2423327D5800ABC8CD /* CategoryItemLarge.swift */,
+				B181B4382348E59900D5982C /* CategoryItem.swift */,
+				B181B43A234910C400D5982C /* CategoryRow.swift */,
 				B1BE67732333DBF600E8C01E /* LandmarkDetail.swift */,
 			);
 			path = views;
@@ -129,6 +134,7 @@
 		B15D8F192331455100474606 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				B1CCB1D52348E1D000596B43 /* HomeViewController.swift */,
 				B15D8F1A2331456500474606 /* AvatarController.swift */,
 				B15D8F1C2331481700474606 /* MapViewController.swift */,
 				B15D8F15233137A900474606 /* LandmarkDetailController.swift */,
@@ -155,7 +161,7 @@
 			);
 			name = "WWDC19-Swift";
 			productName = "WWDC19-Swift";
-			productReference = B1019D5C2327FDF9003193C9 /* WWDC19-Swift.app */;
+			productReference = B1019D5C2327FDF9003193C9 /* App-Swift.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -254,12 +260,14 @@
 			files = (
 				B15D8F1B2331456500474606 /* AvatarController.swift in Sources */,
 				B15D8F1023311E7E00474606 /* Avatar.swift in Sources */,
-				B1119D2523327D5800ABC8CD /* CategoryItemLarge.swift in Sources */,
 				B15D8F14233134B200474606 /* MapView.swift in Sources */,
 				B1BE67742333DBF600E8C01E /* LandmarkDetail.swift in Sources */,
+				B1CCB1D62348E1D000596B43 /* HomeViewController.swift in Sources */,
 				B1019D622327FDF9003193C9 /* ViewController.swift in Sources */,
 				B15D8F16233137A900474606 /* LandmarkDetailController.swift in Sources */,
 				B1019D602327FDF9003193C9 /* AppDelegate.swift in Sources */,
+				B181B4392348E59900D5982C /* CategoryItem.swift in Sources */,
+				B181B43B234910C400D5982C /* CategoryRow.swift in Sources */,
 				B15D8F1D2331481700474606 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,9 +423,9 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ly05010419.WWDC19-Swift";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "App-Swift";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -434,9 +442,9 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ly05010419.WWDC19-Swift";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "App-Swift";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

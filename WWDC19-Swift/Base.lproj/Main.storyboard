@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="jky-86-FwS">
             <objects>
-                <tableViewController id="e9F-NW-IRB" customClass="ViewController" customModule="WWDC19_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="e9F-NW-IRB" customClass="ViewController" customModule="App_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Yrc-cB-dmP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -45,16 +45,36 @@
                         <segue destination="xEg-e6-RxD" kind="show" identifier="avatarShow" id="eJt-na-PlY"/>
                         <segue destination="aIi-EF-0gV" kind="show" identifier="mapViewShow" id="Pe3-qV-8V0"/>
                         <segue destination="lvg-j1-fNM" kind="show" identifier="landmarkDetail" id="exb-io-60y"/>
+                        <segue destination="84X-LY-BSQ" kind="show" identifier="homeView" id="k1J-UN-Jgt"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jxB-tZ-tyi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-730" y="717"/>
         </scene>
+        <!--Home View Controller-->
+        <scene sceneID="rZu-GL-0Vr">
+            <objects>
+                <viewController id="84X-LY-BSQ" customClass="HomeViewController" customModule="App_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OWM-e2-sIx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="hY5-9X-Gey"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PDG-rH-S1l"/>
+                    <connections>
+                        <segue destination="lvg-j1-fNM" kind="show" identifier="landmarkDetail" id="G13-va-e3l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TuT-Rg-yXI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2820" y="1576"/>
+        </scene>
         <!--Avatar Controller-->
         <scene sceneID="9eR-cQ-Zdl">
             <objects>
-                <viewController id="xEg-e6-RxD" customClass="AvatarController" customModule="WWDC19_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xEg-e6-RxD" customClass="AvatarController" customModule="App_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BGg-jM-C95">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,7 +90,7 @@
         <!--Landmark Detail Controller-->
         <scene sceneID="KWP-EG-pkn">
             <objects>
-                <viewController id="lvg-j1-fNM" customClass="LandmarkDetailController" customModule="WWDC19_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lvg-j1-fNM" customClass="LandmarkDetailController" customModule="App_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DZ2-EC-SB2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,7 +106,7 @@
         <!--Map View Controller-->
         <scene sceneID="vMb-UF-PUL">
             <objects>
-                <viewController id="aIi-EF-0gV" customClass="MapViewController" customModule="WWDC19_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aIi-EF-0gV" customClass="MapViewController" customModule="App_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sFt-yf-V1E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,4 +138,7 @@
             <point key="canvasLocation" x="-730.43478260869574" y="-46.205357142857139"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="G13-va-e3l"/>
+    </inferredMetricsTieBreakers>
 </document>

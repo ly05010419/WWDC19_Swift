@@ -3,7 +3,7 @@ import GoogleMaps
 
 class ViewController: UITableViewController {
     
-    let list:[String] = ["LandmarkDetail","Avatar","MapView"]
+    let list:[String] = ["Home","LandmarkDetail","Avatar","MapView"]
     var dataList: [Landmark] = Array()
     var model:Landmark = Landmark()
     
@@ -17,7 +17,7 @@ class ViewController: UITableViewController {
         } catch let error  {
             print("Error:\(error)")
         }
-        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.prefersLargeTitles = false
         self.title = "WWDC19"
     }
     
@@ -28,6 +28,7 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath)
         let label = cell.viewWithTag(1001) as! UILabel
+        label.font = UIFont.systemFont(ofSize: 14, weight:.regular)
         label.text = list[indexPath.row]
         return cell
     }
@@ -35,10 +36,12 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         switch indexPath.row {
         case 0:
-            self.performSegue(withIdentifier: "landmarkDetail", sender: self)
+            self.performSegue(withIdentifier: "homeView", sender: self)
         case 1:
-            self.performSegue(withIdentifier: "avatarShow", sender: self)
+            self.performSegue(withIdentifier: "landmarkDetail", sender: self)
         case 2:
+            self.performSegue(withIdentifier: "avatarShow", sender: self)
+        case 3:
             self.performSegue(withIdentifier: "mapViewShow", sender: self)
         default:
             self.performSegue(withIdentifier: "landmarkDetail", sender: self)
@@ -48,6 +51,11 @@ class ViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let identifier = segue.identifier {
             switch identifier {
+            case "homeView":
+                if let vc = segue.destination as? HomeViewController {
+                    vc.dataList = self.dataList
+                    vc.model = self.model
+                }
             case "landmarkDetail":
                 if let vc = segue.destination as? LandmarkDetailController {
                     vc.dataList = self.dataList

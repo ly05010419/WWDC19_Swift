@@ -30,7 +30,7 @@ class LandmarkDetailController: UIViewController,UIScrollViewDelegate {
         self.view.addSubview(nameLabel)
         
         let landmarkDetail:LandmarkDetail = LandmarkDetail(frame:
-            CGRect(x:0 , y: 550, width:width , height: 320),dataList: dataList)
+            CGRect(x:0 , y: 550, width:width , height: 320),dataList: dataList,controller: self)
         self.view.addSubview(landmarkDetail)
     }
 }
