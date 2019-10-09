@@ -49,13 +49,13 @@ class CategoryItem : UIView{
         nameLabel.text = self.model.name
         nameLabel.font = UIFont.systemFont(ofSize: 12.0)
         self.addSubview(nameLabel)
-//        self.backgroundColor = UIColor.red
     }
     
     @objc func buttonPressed(){
-        self.controller?.performSegue(withIdentifier: "landmarkDetail", sender: self.model)
+        if(self.controller is HomeViewController){
+            self.controller?.performSegue(withIdentifier: "landmarkDetail", sender: self.model)
+        }
     }
-    
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
