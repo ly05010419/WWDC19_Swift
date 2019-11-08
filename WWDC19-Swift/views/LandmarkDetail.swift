@@ -11,7 +11,7 @@ import UIKit
 
 class LandmarkDetail : UIView,UIScrollViewDelegate{
     var controller:UIViewController?
-    private var items:[CategoryItem] = Array()
+    private var items:[ItemView] = Array()
     private var dataList:[Landmark] = Array()
     
     private let paddingVerticel:Int = 40
@@ -38,7 +38,7 @@ class LandmarkDetail : UIView,UIScrollViewDelegate{
         
         var index = 0
         for data in dataList {
-            let categoryItem = CategoryItem(frame: CGRect(x: (index * (160+10))+15 , y: paddingVerticel, width: 160, height: 250),model: data,width: 160,height: 200,controller:self.controller )
+            let categoryItem = ItemView(frame: CGRect(x: (index * (160+10))+15 , y: paddingVerticel, width: 160, height: 250),model: data,width: 160,height: 200,controller:self.controller )
             scrollView.addSubview(categoryItem)
             items.append(categoryItem)
             index = index+1

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-class CategoryRow : UIView{
+class RowView : UIView{
     var name:String = "";
     var dataList: [Landmark] = Array()
     var controller:UIViewController?
@@ -39,7 +39,7 @@ class CategoryRow : UIView{
         height = height-20;
         for index in 0..<dataList.count {
             let item = dataList[index]
-            rowView.addSubview(CategoryItem(frame: CGRect(x: CGFloat(15+165*index), y: 10, width: height, height: height), model: item,width: 150,height: 150, controller: self.controller))
+            rowView.addSubview(ItemView(frame: CGRect(x: CGFloat(15+165*index), y: 10, width: height, height: height), model: item,width: 150,height: 150, controller: self.controller))
         }
         rowView.showsHorizontalScrollIndicator = false
         rowView.contentSize = CGSize(width:dataList.count*165+15, height: 150)

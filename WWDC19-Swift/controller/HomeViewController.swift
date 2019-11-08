@@ -11,6 +11,7 @@ import UIKit
 
 class HomeViewController: UIViewController,UIScrollViewDelegate {
     
+    
     var model:Landmark = Landmark()
     var dataList: [Landmark] = Array()
     var categories: [String: [Landmark]] {
@@ -21,6 +22,18 @@ class HomeViewController: UIViewController,UIScrollViewDelegate {
     }
     
     override func viewDidLoad() {
+        
+        self.title = "Home"
+        
+        do {
+            let path = Bundle.main.path(forResource: "landmarkData", ofType: "json")
+            let data = try Data(contentsOf: URL(fileURLWithPath: path!))
+            let jsonDecoder = JSONDecoder()
+            self.dataList = try jsonDecoder.decode([Landmark].self, from: data)
+            self.model = dataList[0]
+        } catch let error  {
+            print("Error:\(error)")
+        }
         
         let width = UIScreen.main.bounds.size.width
         let height = UIScreen.main.bounds.size.height
@@ -40,7 +53,7 @@ class HomeViewController: UIViewController,UIScrollViewDelegate {
         var index:CGFloat = 0.0;
         for (name,item) in categories{
             let y = 520+index*235
-            let rowView = CategoryRow(frame: CGRect(x: 0, y: y, width: width, height: 230),dataList: item,name:name,controller: self)
+            let rowView = RowView(frame: CGRect(x: 0, y: y, width: width, height: 230),dataList: item,name:name,controller: self)
             rowView.clipsToBounds = true
             scrollView.addSubview(rowView)
             index = index+1
@@ -67,5 +80,25 @@ class HomeViewController: UIViewController,UIScrollViewDelegate {
         }
     }
     
+}
+
+
+
+struct Landmark: Codable {
+    var id: Int!
+    var name: String!
+    var category: String!
+    var city: String!
+    var state: String!
+    var isFeatured: Bool!
+    var isFavorite: Bool!
+    var park: String!
+    var imageName: String!
+    var coordinates: Coordinate!
+}
+
+struct Coordinate: Codable {
+    var longitude: Double!
+    var latitude: Double!
 }
 

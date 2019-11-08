@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CategoryItem : UIView{
+class ItemView : UIView{
     var model:Landmark = Landmark()
     var height:CGFloat = 150
     var width:CGFloat = 150

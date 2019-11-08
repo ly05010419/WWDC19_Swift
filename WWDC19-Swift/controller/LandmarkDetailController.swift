@@ -15,6 +15,8 @@ class LandmarkDetailController: UIViewController,UIScrollViewDelegate {
     var dataList: [Landmark] = Array()
     
     override func viewDidLoad() {
+        
+        self.title = model.name;
         let width = UIScreen.main.bounds.size.width
         let mapView = MapView(frame: CGRect(x: 0, y: 0, width: width, height: 400),model:model)
         self.view.addSubview(mapView)
