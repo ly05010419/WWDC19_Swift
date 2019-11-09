@@ -63,22 +63,6 @@ class HomeViewController: UIViewController,UIScrollViewDelegate {
         self.view.addSubview(scrollView)
         
     }
-    
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //        if let identifier = segue.identifier {
-    //            switch identifier {
-    //
-    //            case "landmarkDetail":
-    //                guard let vc = segue.destination as? LandmarkDetailController else {return}
-    //                vc.dataList = self.dataList
-    //                guard let model = sender as? Landmark else {return}
-    //                vc.model = model
-    //
-    //            default: break
-    //            }
-    //        }
-    //    }
-    
 }
 
 struct Landmark : Codable {
