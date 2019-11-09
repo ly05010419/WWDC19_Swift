@@ -10,19 +10,18 @@ import Foundation
 import UIKit
 
 class HomeViewController: UIViewController,UIScrollViewDelegate {
-    
-    
-    var model:Landmark = Landmark()
-    var dataList: [Landmark] = Array()
-    var categories: [String: [Landmark]] {
+    var model : Landmark = Landmark()
+    var dataList : [Landmark] = Array()
+    var categories : [String:[Landmark]] {
         Dictionary(
             grouping: dataList,
             by: { $0.category }
         )
     }
-    
+
     override func viewDidLoad() {
         
+        self.view.backgroundColor = UIColor.white
         self.title = "Home"
         
         do {
@@ -65,26 +64,24 @@ class HomeViewController: UIViewController,UIScrollViewDelegate {
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let identifier = segue.identifier {
-            switch identifier {
-                
-            case "landmarkDetail":
-                guard let vc = segue.destination as? LandmarkDetailController else {return}
-                vc.dataList = self.dataList
-                guard let model = sender as? Landmark else {return}
-                vc.model = model
-                
-            default: break
-            }
-        }
-    }
+    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //        if let identifier = segue.identifier {
+    //            switch identifier {
+    //
+    //            case "landmarkDetail":
+    //                guard let vc = segue.destination as? LandmarkDetailController else {return}
+    //                vc.dataList = self.dataList
+    //                guard let model = sender as? Landmark else {return}
+    //                vc.model = model
+    //
+    //            default: break
+    //            }
+    //        }
+    //    }
     
 }
 
-
-
-struct Landmark: Codable {
+struct Landmark : Codable {
     var id: Int!
     var name: String!
     var category: String!

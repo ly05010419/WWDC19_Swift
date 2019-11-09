@@ -13,9 +13,9 @@ class ItemView : UIView{
     var model:Landmark = Landmark()
     var height:CGFloat = 150
     var width:CGFloat = 150
-    var controller:UIViewController?
+    var controller:HomeViewController?
     
-    init(frame: CGRect, model:Landmark,width:CGFloat,height:CGFloat,controller:UIViewController?) {
+    init(frame: CGRect, model:Landmark,width:CGFloat,height:CGFloat,controller:HomeViewController?) {
         self.model = model
         self.width = width
         self.height = height
@@ -52,9 +52,10 @@ class ItemView : UIView{
     }
     
     @objc func buttonPressed(){
-        if(self.controller is HomeViewController){
-            self.controller?.performSegue(withIdentifier: "landmarkDetail", sender: self.model)
-        }
+        let vc = LandmarkDetailController()
+        vc.dataList = self.controller?.dataList
+        vc.model = self.controller?.model
+        self.controller?.navigationController?.pushViewController(vc, animated: true)
     }
     
     required init?(coder: NSCoder) {

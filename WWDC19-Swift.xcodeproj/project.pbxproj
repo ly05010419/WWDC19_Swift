@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		24966FDE3388AB7AE8E591CF /* libPods-WWDC19-Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE93BA1F2D0C498A6EB8F83 /* libPods-WWDC19-Swift.a */; };
 		B1019D602327FDF9003193C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1019D5F2327FDF9003193C9 /* AppDelegate.swift */; };
-		B1019D652327FDF9003193C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1019D632327FDF9003193C9 /* Main.storyboard */; };
 		B1019D672327FE00003193C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1019D662327FE00003193C9 /* Assets.xcassets */; };
 		B1019D6A2327FE00003193C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1019D682327FE00003193C9 /* LaunchScreen.storyboard */; };
 		B15D8F1023311E7E00474606 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15D8F0F23311E7E00474606 /* Avatar.swift */; };
@@ -27,7 +26,6 @@
 		A63FDAC7E9CBDBFB49D90369 /* Pods-WWDC19-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WWDC19-Swift.debug.xcconfig"; path = "Target Support Files/Pods-WWDC19-Swift/Pods-WWDC19-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		B1019D5C2327FDF9003193C9 /* App-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1019D5F2327FDF9003193C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B1019D642327FDF9003193C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B1019D662327FE00003193C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1019D692327FE00003193C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1019D6B2327FE00003193C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 				B15D8F192331455100474606 /* controller */,
 				B15D8F18233142FB00474606 /* data */,
 				B15D8F17233142F100474606 /* views */,
-				B1019D632327FDF9003193C9 /* Main.storyboard */,
 				B1019D662327FE00003193C9 /* Assets.xcassets */,
 				B1019D682327FE00003193C9 /* LaunchScreen.storyboard */,
 				B1019D6B2327FE00003193C9 /* Info.plist */,
@@ -196,7 +193,6 @@
 				B1019D6A2327FE00003193C9 /* LaunchScreen.storyboard in Resources */,
 				B15D8F1223311F3E00474606 /* landmarkData.json in Resources */,
 				B1019D672327FE00003193C9 /* Assets.xcassets in Resources */,
-				B1019D652327FDF9003193C9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,14 +259,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B1019D632327FDF9003193C9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B1019D642327FDF9003193C9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B1019D682327FE00003193C9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -333,7 +321,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -388,7 +376,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

@@ -10,15 +10,13 @@ import Foundation
 import UIKit
 
 class LandmarkDetail : UIView,UIScrollViewDelegate{
-    var controller:UIViewController?
-    private var items:[ItemView] = Array()
-    private var dataList:[Landmark] = Array()
+    var controller:HomeViewController?
+    public var items:[ItemView] = Array()
+    public var dataList:[Landmark]?
     
     private let paddingVerticel:Int = 40
     
-    
-    
-    init(frame: CGRect, dataList:[Landmark],controller:UIViewController?) {
+    init(frame: CGRect, dataList:[Landmark]?,controller:HomeViewController?) {
         self.dataList = dataList
         self.controller = controller
         super.init(frame: frame)
@@ -37,14 +35,19 @@ class LandmarkDetail : UIView,UIScrollViewDelegate{
         scrollView.showsHorizontalScrollIndicator = false
         
         var index = 0
-        for data in dataList {
+        
+        guard let list = dataList else {
+            return
+        }
+        
+        for data in list {
             let categoryItem = ItemView(frame: CGRect(x: (index * (160+10))+15 , y: paddingVerticel, width: 160, height: 250),model: data,width: 160,height: 200,controller:self.controller )
             scrollView.addSubview(categoryItem)
             items.append(categoryItem)
             index = index+1
         }
         
-        let width:CGFloat =  CGFloat(((160+10) * dataList.count)+15+230)
+        let width:CGFloat =  CGFloat(((160+10) * list.count)+15+230)
         scrollView.contentSize = CGSize(width:width , height: height)
         caculatePosition(scrollView: scrollView)
         scrollView.delegate = self

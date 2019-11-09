@@ -11,9 +11,9 @@ import UIKit
 
 class Avatar : UIView{
     
-    var imageName:String = ""
+    var imageName:String?
     
-    init(frame: CGRect, imageName:String) {
+    init(frame: CGRect, imageName:String?) {
         self.imageName = imageName
         super.init(frame: frame)
         setup()
@@ -28,8 +28,10 @@ class Avatar : UIView{
         self.layer.shadowColor = UIColor.systemGray.cgColor
         self.layer.shadowOpacity = 1
         
-        
-        let imageView = UIImageView(image:UIImage(named:imageName));
+        guard let named = imageName else {
+            return
+        }
+        let imageView = UIImageView(image:UIImage(named:named));
         imageView.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height)
         imageView.layer.cornerRadius = self.layer.cornerRadius
         imageView.clipsToBounds = true

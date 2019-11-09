@@ -13,9 +13,9 @@ import UIKit
 class RowView : UIView{
     var name:String = "";
     var dataList: [Landmark] = Array()
-    var controller:UIViewController?
+    var controller:HomeViewController?
     
-    init(frame: CGRect, dataList:[Landmark],name:String,controller:UIViewController?) {
+    init(frame: CGRect, dataList:[Landmark],name:String,controller:HomeViewController?) {
         self.dataList = dataList
         self.name = name
         self.controller = controller
